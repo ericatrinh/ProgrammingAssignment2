@@ -1,5 +1,5 @@
-## makeCacheMatrx & cacheSolve work together to return the inverse of
-## a square matrix from the cache
+## makeCacheMatrx & cacheSolve work together to cache and return the inverse of
+## a square matrix 
 
 ## makeCacheMatrix contains functions to set/get the matrix and to set/get 
 ## the values from solve() to cache the inverse of the matrix
