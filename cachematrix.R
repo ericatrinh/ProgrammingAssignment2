@@ -1,4 +1,4 @@
-## makeCacheMatrx & cacheSolve work together return the inverse of
+## makeCacheMatrx & cacheSolve work together to return the inverse of
 ## a square matrix from the cache
 
 ## makeCacheMatrix contains functions to set/get the matrix and to set/get 
@@ -16,8 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
                setSolve = setSolve, getSolve = getSolve)
 }
 
-## cacheSolve returns the invertible matrix derived from
-## the special matrix returned from makeCacheMatrix
+## cacheSolve takes in the object returned from makeCacheMatrix and returns 
+## the invertible matrix 
 cacheSolve <- function(x, ...) {
     m <- x$getSolve()
     if( !is.null(m) ){
