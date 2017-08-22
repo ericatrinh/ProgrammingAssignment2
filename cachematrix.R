@@ -1,5 +1,5 @@
-## makeCacheMatrx & cacheSolve work together to cache and return the inverse of
-## a square matrix 
+## makeCacheMatrx & cacheSolve work together return the inverse of
+## a square matrix from the cache
 
 ## makeCacheMatrix contains functions to set/get the matrix and to set/get 
 ## the values from solve() to cache the inverse of the matrix
@@ -10,14 +10,14 @@ makeCacheMatrix <- function(x = matrix()) {
         m <<- NULL
     }
     get <- function() x
-    setSolve <- function(solve) m <<- solve
+    setSolve <- function(inverse) m <<- inverse
     getSolve <- function() m
     list(set = set, get = get, 
                setSolve = setSolve, getSolve = getSolve)
 }
 
-## cacheSolve takes in the object returned from makeCacheMatrix and returns 
-## the invertible matrix 
+## cacheSolve returns the invertible matrix derived from
+## the special matrix returned from makeCacheMatrix
 cacheSolve <- function(x, ...) {
     m <- x$getSolve()
     if( !is.null(m) ){
